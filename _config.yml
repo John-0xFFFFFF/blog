@@ -24,7 +24,6 @@ github_username:  john-0xffffff
 
 # Build settings
 markdown: kramdown
-<<<<<<< HEAD
 theme: minima
 =======
 theme: jekyll-theme-minimal
