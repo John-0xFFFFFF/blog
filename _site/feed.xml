@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-06-13T10:57:47+08:00</updated><id>http://localhost:4000/</id><title type="html">朝花  夕拾</title><subtitle></subtitle><entry><title type="html">A Hard Day’s Night</title><link href="http://localhost:4000/2017/06/13/A-Hard-Day's-Night.html" rel="alternate" type="text/html" title="A Hard Day's Night" /><published>2017-06-13T00:00:00+08:00</published><updated>2017-06-13T00:00:00+08:00</updated><id>http://localhost:4000/2017/06/13/A-Hard-Day's-Night</id><content type="html" xml:base="http://localhost:4000/2017/06/13/A-Hard-Day's-Night.html">&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-06-13T11:36:12+08:00</updated><id>http://localhost:4000/</id><title type="html">朝花  夕拾</title><subtitle></subtitle><entry><title type="html">A Hard Day’s Night</title><link href="http://localhost:4000/2017/06/13/A-Hard-Day's-Night.html" rel="alternate" type="text/html" title="A Hard Day's Night" /><published>2017-06-13T00:00:00+08:00</published><updated>2017-06-13T00:00:00+08:00</updated><id>http://localhost:4000/2017/06/13/A-Hard-Day's-Night</id><content type="html" xml:base="http://localhost:4000/2017/06/13/A-Hard-Day's-Night.html">&lt;blockquote&gt;
   &lt;p&gt;我本楚狂人，凤歌笑孔丘。手持绿玉杖，朝别黄鹤楼。&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;想了很久博客该叫什么名字，还是叫&lt;strong&gt;朝花夕拾&lt;/strong&gt;好了，很贴切又好听。&lt;/p&gt;
 
-&lt;p&gt;主要用来记录下日常吧，也没什么特别多要说的。&lt;/p&gt;
+&lt;p&gt;主要用来记录下日常，也没什么特别多要说的。&lt;/p&gt;
 
 &lt;hr /&gt;
-&lt;p&gt;&lt;em&gt;这个博客用的是jekyll+github page简单搭起来的。找了个免费的polar bear主题套用了下，以后再微调吧。&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><category term="Diary" /><summary type="html">我本楚狂人，凤歌笑孔丘。手持绿玉杖，朝别黄鹤楼。</summary></entry></feed>
+&lt;p&gt;&lt;em&gt;这个博客用的是jekyll+github page简单搭起来的。用了Camille Diez的Polar Bear主题，并改了主题色。&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><category term="Diary" /><summary type="html">我本楚狂人，凤歌笑孔丘。手持绿玉杖，朝别黄鹤楼。</summary></entry></feed>

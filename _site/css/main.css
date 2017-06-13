@@ -1,3 +1,4 @@
+/*#00B2EE;*/
 /* Reset Basic Elements
  * ============================================== */
 body, h1, h2, h3, h4, h5, h6,
@@ -72,17 +73,17 @@ h6 {
 /* Links
  * ============================================== */
 a {
-  color: #008cbb;
+  color: #148f77;
   text-decoration: none; }
   a:hover {
-    color: #006688;
+    color: #0e6252;
     text-decoration: none; }
 
 /* Block Quotes
  * ============================================== */
 blockquote {
   color: #BBB;
-  border-left: 4px solid #00B2EE;
+  border-left: 4px solid #1abc9c;
   padding-left: 15px;
   font-size: 17px;
   letter-spacing: -1px;
@@ -164,7 +165,7 @@ table {
  * ============================================== */
 .site-header {
   min-height: 450px;
-  background-color: #00B2EE;
+  background-color: #1abc9c;
   background-image: url("");
   background-size: cover;
   background-position: center -170px;
