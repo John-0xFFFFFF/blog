@@ -31,4 +31,4 @@ exclude:
   - Gemfile
   - Gemfile.lock
 comments:
-  provider: uyan
+  provider: wycloud
