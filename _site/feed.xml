@@ -1,4 +1,65 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2017-06-14T04:53:01+08:00</updated><id>/</id><title type="html">朝花  夕拾</title><subtitle></subtitle><entry><title type="html">学习安排</title><link href="/2017/06/14/Time-to-take-a-change.html" rel="alternate" type="text/html" title="学习安排" /><published>2017-06-14T00:00:00+08:00</published><updated>2017-06-14T00:00:00+08:00</updated><id>/2017/06/14/Time-to-take-a-change</id><content type="html" xml:base="/2017/06/14/Time-to-take-a-change.html">&lt;h1 id=&quot;最近是真的烦&quot;&gt;最近是真的烦&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-06-15T02:28:31+08:00</updated><id>http://localhost:4000/</id><title type="html">朝花  夕拾</title><subtitle></subtitle><entry><title type="html">KMP算法小结</title><link href="http://localhost:4000/2017/06/15/kmp.html" rel="alternate" type="text/html" title="KMP算法小结" /><published>2017-06-15T00:00:00+08:00</published><updated>2017-06-15T00:00:00+08:00</updated><id>http://localhost:4000/2017/06/15/kmp</id><content type="html" xml:base="http://localhost:4000/2017/06/15/kmp.html">&lt;blockquote&gt;
+  &lt;p&gt;严蔚敏的&lt;strong&gt;数据结构&lt;/strong&gt;上写得实在太简略了，看了篇博文才看明白这算法。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;算法主要思想&quot;&gt;算法主要思想&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;字符串匹配时，主串和模式串失配时，模式串向右移动，其移动位数=已匹配字符数-失配字符的上一字符所对应的最大长度值，等同于失配字符所在位置-失配字符的next函数值。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;next的函数值，相当于将最大长度值集体向右移动一位，且初值赋为-1。（也就是相当于计算失配字符之前，字符串中最大长度的适配前缀后缀。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;img src=&quot;http://wx4.sinaimg.cn/mw690/a69cd24bgy1fgl8zca0uvj20ip03qdfz.jpg&quot; alt=&quot;next&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;next算法demo&quot;&gt;Next算法demo&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;递推计算next数组&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;void GetNext(char* p,int next[])
+
+    {    
+        int pLen = strlen(p);      
+        next[0] = -1;  
+        int k = -1;  
+        int j = 0;  
+        while (j &amp;lt; pLen - 1)  
+        {  
+            //p[k]表示前缀，p[j]表示后缀  
+            if (k == -1 || p[j] == p[k])   
+            {  
+                ++k;  
+                ++j;  
+                next[j] = k;  
+            }  
+            else   
+            {  
+                k = next[k];  
+            }  
+        }  
+    }  
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;还有个改进算法还没看。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;原博地址http://blog.csdn.net/v_july_v/article/details/7041827&lt;/p&gt;</content><author><name></name></author><category term="Diary" /><summary type="html">严蔚敏的数据结构上写得实在太简略了，看了篇博文才看明白这算法。</summary></entry><entry><title type="html">新浪微博图床测试</title><link href="http://localhost:4000/2017/06/14/test.html" rel="alternate" type="text/html" title="新浪微博图床测试" /><published>2017-06-14T00:00:00+08:00</published><updated>2017-06-14T00:00:00+08:00</updated><id>http://localhost:4000/2017/06/14/test</id><content type="html" xml:base="http://localhost:4000/2017/06/14/test.html">&lt;blockquote&gt;
+  &lt;p&gt;手机和电脑都这壁纸&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://wx4.sinaimg.cn/mw1024/a69cd24bgy1fgl7umz9tkj21hc0xc4jp.jpg&quot; alt=&quot;test&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><category term="Diary" /><summary type="html">手机和电脑都这壁纸</summary></entry><entry><title type="html">试试评论功能</title><link href="http://localhost:4000/2017/06/14/comments-test.html" rel="alternate" type="text/html" title="试试评论功能" /><published>2017-06-14T00:00:00+08:00</published><updated>2017-06-14T00:00:00+08:00</updated><id>http://localhost:4000/2017/06/14/comments-test</id><content type="html" xml:base="http://localhost:4000/2017/06/14/comments-test.html">&lt;p&gt;测试下刚完善的评论功能。&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;曲线救国&lt;/p&gt;</content><author><name></name></author><category term="Diary" /><summary type="html">测试下刚完善的评论功能。</summary></entry><entry><title type="html">学习安排</title><link href="http://localhost:4000/2017/06/14/Time-to-take-a-change.html" rel="alternate" type="text/html" title="学习安排" /><published>2017-06-14T00:00:00+08:00</published><updated>2017-06-14T00:00:00+08:00</updated><id>http://localhost:4000/2017/06/14/Time-to-take-a-change</id><content type="html" xml:base="http://localhost:4000/2017/06/14/Time-to-take-a-change.html">&lt;h1 id=&quot;最近是真的烦&quot;&gt;最近是真的烦&lt;/h1&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -41,11 +102,11 @@
 &lt;/ul&gt;
 
 &lt;hr /&gt;
-&lt;p&gt;牢骚到此为止～&lt;/p&gt;</content><author><name></name></author><category term="Diary" /><summary type="html">最近是真的烦</summary></entry><entry><title type="html">一点感悟</title><link href="/2017/06/13/%E5%9B%BE-%E7%89%87-%E6%B5%8B-%E8%AF%95.html" rel="alternate" type="text/html" title="一点感悟" /><published>2017-06-13T00:00:00+08:00</published><updated>2017-06-13T00:00:00+08:00</updated><id>/2017/06/13/%E5%9B%BE-%E7%89%87-%E6%B5%8B-%E8%AF%95</id><content type="html" xml:base="/2017/06/13/%E5%9B%BE-%E7%89%87-%E6%B5%8B-%E8%AF%95.html">&lt;blockquote&gt;
+&lt;p&gt;牢骚到此为止～&lt;/p&gt;</content><author><name></name></author><category term="Diary" /><summary type="html">最近是真的烦</summary></entry><entry><title type="html">一点感悟</title><link href="http://localhost:4000/2017/06/13/%E5%9B%BE-%E7%89%87-%E6%B5%8B-%E8%AF%95.html" rel="alternate" type="text/html" title="一点感悟" /><published>2017-06-13T00:00:00+08:00</published><updated>2017-06-13T00:00:00+08:00</updated><id>http://localhost:4000/2017/06/13/%E5%9B%BE-%E7%89%87-%E6%B5%8B-%E8%AF%95</id><content type="html" xml:base="http://localhost:4000/2017/06/13/%E5%9B%BE-%E7%89%87-%E6%B5%8B-%E8%AF%95.html">&lt;blockquote&gt;
   &lt;p&gt;主要是测试下图片显示:)&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/wechat1.png&quot; alt=&quot;wechat1&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><category term="Diary" /><summary type="html">主要是测试下图片显示:)</summary></entry><entry><title type="html">A Hard Day’s Night</title><link href="/2017/06/13/A-Hard-Day's-Night.html" rel="alternate" type="text/html" title="A Hard Day's Night" /><published>2017-06-13T00:00:00+08:00</published><updated>2017-06-13T00:00:00+08:00</updated><id>/2017/06/13/A-Hard-Day's-Night</id><content type="html" xml:base="/2017/06/13/A-Hard-Day's-Night.html">&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wechat1.png&quot; alt=&quot;wechat1&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><category term="Diary" /><summary type="html">主要是测试下图片显示:)</summary></entry><entry><title type="html">A Hard Day’s Night</title><link href="http://localhost:4000/2017/06/13/A-Hard-Day's-Night.html" rel="alternate" type="text/html" title="A Hard Day's Night" /><published>2017-06-13T00:00:00+08:00</published><updated>2017-06-13T00:00:00+08:00</updated><id>http://localhost:4000/2017/06/13/A-Hard-Day's-Night</id><content type="html" xml:base="http://localhost:4000/2017/06/13/A-Hard-Day's-Night.html">&lt;blockquote&gt;
   &lt;p&gt;我本楚狂人，凤歌笑孔丘。手持绿玉杖，朝别黄鹤楼。&lt;/p&gt;
 &lt;/blockquote&gt;
 

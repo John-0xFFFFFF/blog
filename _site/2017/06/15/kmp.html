@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>学习安排</title>
-  <meta name="description" content="最近是真的烦">
+  <title>KMP算法小结</title>
+  <meta name="description" content="  严蔚敏的数据结构上写得实在太简略了，看了篇博文才看明白这算法。">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://localhost:4000/2017/06/14/Time-to-take-a-change.html">
+  <link rel="canonical" href="http://localhost:4000/2017/06/15/kmp.html">
   <link rel="alternate" type="application/rss+xml" title="朝花  夕拾" href="http://localhost:4000/feed.xml" />
 
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -54,55 +54,66 @@
         <div class="post">
 
   <header class="post-header">
-     <h1 class="post-title">学习安排</h1>
-     <p class="post-meta">Posted on Jun 14, 2017</p>
+     <h1 class="post-title">KMP算法小结</h1>
+     <p class="post-meta">Posted on Jun 15, 2017</p>
   </header>
 
   <article class="post-content">
-    <h1 id="最近是真的烦">最近是真的烦</h1>
+    <blockquote>
+  <p>严蔚敏的<strong>数据结构</strong>上写得实在太简略了，看了篇博文才看明白这算法。</p>
+</blockquote>
+
+<h1 id="算法主要思想">算法主要思想</h1>
 
 <ul>
   <li>
-    <p>怎么港，已经开始去医院实习了。本来挺清闲的活儿，偏偏被学校用各种杂事差使来差使去。签到，一天三场讲座，各种让我们去凑数。
-见习两星期结束后有考试，实习中期有考试，实习结束还是有考试。每个月都有查岗，学习的时间可以说是很零碎了。偏偏这学期教务处还
-创新性地让我们去江北校区呆两个月，早出晚归坐班车又不知道得浪费多少时间，到了江北校区翘班也很难了。</p>
+    <p>字符串匹配时，主串和模式串失配时，模式串向右移动，其移动位数=已匹配字符数-失配字符的上一字符所对应的最大长度值，等同于失配字符所在位置-失配字符的next函数值。</p>
   </li>
   <li>
-    <p>最近还一直失眠，入睡能花上一个小时，每晚都做很多梦，已经没法正常作息了。</p>
+    <p>next的函数值，相当于将最大长度值集体向右移动一位，且初值赋为-1。（也就是相当于计算失配字符之前，字符串中最大长度的适配前缀后缀。</p>
   </li>
   <li>
-    <p>学习进度也很落后，<em>数据结构</em>这本书看了一万年也还没看完。晚上看了个KMP算法，结果宿舍太热闹，也是
-看个一知半解，好多细节还没搞清楚，明天上班时用pocket再看一遍。晚上说不定得去图书馆了。</p>
-  </li>
-  <li>
-    <p>DIABLO3 7月23日还要开新赛季，想玩又不敢玩啊。</p>
+    <p><img src="http://wx4.sinaimg.cn/mw690/a69cd24bgy1fgl8zca0uvj20ip03qdfz.jpg" alt="next" /></p>
   </li>
 </ul>
 
-<h1 id="下一步也不知道该怎么做">下一步也不知道该怎么做</h1>
+<h1 id="next算法demo">Next算法demo</h1>
 
 <ul>
-  <li>
-    <p>本来考研的复习从三月份开始就缓慢进行了。后来期末考试课目实在太多了只好暂时搁置。现在放松了一个月
-感觉心态崩了。还不知道未来的实习什么个强度，但愿碰到的老师能宽松点吧。</p>
-  </li>
-  <li>
-    <p>考研的学校其实早就确定了，但是感觉自己并不够格啊。唯一的优势就是本科学校平台还行。感觉必须要考出
-很高的初试分才有机会。</p>
-  </li>
-  <li>
-    <p>另外打算初试结束后参加几场CTF比赛（如果有机会的话。</p>
-  </li>
+  <li>递推计算next数组</li>
 </ul>
 
-<h1 id="关于博客">关于博客</h1>
+<div class="highlighter-rouge"><pre class="highlight"><code>void GetNext(char* p,int next[])
+
+    {    
+        int pLen = strlen(p);      
+        next[0] = -1;  
+        int k = -1;  
+        int j = 0;  
+        while (j &lt; pLen - 1)  
+        {  
+            //p[k]表示前缀，p[j]表示后缀  
+            if (k == -1 || p[j] == p[k])   
+            {  
+                ++k;  
+                ++j;  
+                next[j] = k;  
+            }  
+            else   
+            {  
+                k = next[k];  
+            }  
+        }  
+    }  
+</code></pre>
+</div>
 
 <ul>
-  <li>明天找时间把评论功能完善下。</li>
+  <li>还有个改进算法还没看。</li>
 </ul>
 
 <hr />
-<p>牢骚到此为止～</p>
+<p>原博地址http://blog.csdn.net/v_july_v/article/details/7041827</p>
 
   </article>
 
